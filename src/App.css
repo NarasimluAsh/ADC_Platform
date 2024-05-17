@@ -5,89 +5,67 @@
   text-align: center;
 }
 
-.record-section {
+/* Basic styles for the main section */
+.main-section {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Styles for the list of storybooks */
+.storybook-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styles for individual storybook items */
+.storybook-item {
+  border: 1px solid #666;
+  padding: 16px;
+  width: auto;
+  border-radius: 8px;
+  background-color: #66666633;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Styles for the storybook details */
+.storybook-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 24rem;
 }
 
-/* microphone */
-.mic-toggle {
-  position: relative;
-  margin-bottom: 4rem;
-  display: block;
+/* Styles for the cover image */
+.storybook-cover {
   width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  border-color: #646cff;
-  background-color: #646cff;
-}
-.mic-toggle::before, .mic-toggle::after {
-  --pad: 0rem;
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 0;
-  background-color: rgba(100, 108, 255, 0.2);
-  top: var(--pad);
-  left: var(--pad);
-  right: var(--pad);
-  bottom: var(--pad);
-  border-radius: 50%;
-}
-.mic-toggle::before {
-  transition: 0.2s;
-}
-.mic-toggle::after {
-  transition: 0.4s;
-}
-.mic-toggle:hover::before {
-  --pad: -1rem;
-}
-.mic-toggle:hover::after {
-  --pad: -2rem;
+  height: auto;
+  border-radius: 8px;
 }
 
-/* microphone - text or mic icon */
-.mic-toggle span {
-  position: relative;
-  z-index: 1;
-  color: #f4f4f4;
-  font-size: 4rem;
+/* Hover effect: slightly enlarge and add a shadow */
+.storybook-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* microphone - recording animation */
-.mic-toggle.is-recording::after {
-  animation: smoothPadAfter 0.6s ease-in alternate-reverse forwards infinite;
+/* Click effect: slightly depress */
+.storybook-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.mic-toggle.is-recording::before {
-  animation: smoothPadBefore 0.6s ease-in alternate-reverse forwards infinite;
+
+.storybook-item h3 {
+  margin: 0;
+  color: #f9f9f9;
 }
-@keyframes smoothPadBefore {
-  0% {
-    top: -1rem;
-    left: -1rem;
-    right: -1rem;
-    bottom: -1rem;
-  }
-  100% {
-    top: -0.5rem;
-    left: -0.5rem;
-    right: -0.5rem;
-    bottom: -0.5rem;
-  }
-}
-@keyframes smoothPadAfter {
-  0% {
-    top: -2rem;
-    left: -2rem;
-    right: -2rem;
-    bottom: -2rem;
-  }
-  100% {
-    top: -1rem;
-    left: -1rem;
-    right: -1rem;
-    bottom: -1rem;
-  }
+
+.storybook-item p {
+  margin: 0;
+  color: #ccc;
 }

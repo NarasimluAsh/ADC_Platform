@@ -16,7 +16,15 @@ Currently, two official plugins are available:
   npm install
   npm run dev
 
-# React Packages
+# The project structure should look like this:
+src/
+├── assets
+├── components
+├── pages
+├── App.css
+├── App.jsx
+├── firebase.js
+└── index.jsx
 
 ## PrimeIcons
 Download
@@ -26,3 +34,12 @@ Import
 - import 'primeicons/primeicons.css';
 
 vsmg & recorder-js to delete
+
+## Firebase
+Install
+- npm install firebase
+- npm install @firebase/firestore
+
+## Navigation
+- npm install react-router-dom
+
