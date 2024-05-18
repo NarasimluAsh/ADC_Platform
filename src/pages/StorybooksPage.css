@@ -1,9 +1,10 @@
 /* src/pages/StorybooksPage.css */
 
+/* Main section styles */
 .main-section {
   padding: 2rem;
-  padding-top: 60px; /* Adjust for fixed navbar */
   text-align: center;
+  margin-top: 60px; /* Adjust for fixed navbar */
 }
 
 .storybook-list {

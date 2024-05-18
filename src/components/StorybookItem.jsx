@@ -1,4 +1,5 @@
 import React from 'react';
+import './StorybookItem.css';
 
 function StorybookItem({ title, author, pageCover }) {
   return (
