@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import StorybookItem from './component/StorybookItem';
+import StorybookItem from './components/StorybookItem';
 import ReaderPage from './pages/ReaderPage';
+import StorybooksPage from './pages/StorybooksPage';
+import Navbar from './components/Navbar';
 import { db, storage } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { getDownloadURL, ref } from 'firebase/storage';
@@ -44,31 +46,13 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <div className="main-section">
-            <h1>Available Storybooks</h1>
-            <div className="storybook-list">
-              {storybooks.map((book) => (
-                <div
-                  key={book.id}
-                  onClick={() => navigate(`/reader/${book.id}`)}
-                >
-                  <StorybookItem
-                    title={book.title}
-                    author={book.author}
-                    pageCover={book.pageCover}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        }
-      />
-      <Route path="/reader/:id" element={<ReaderPage />} />
-    </Routes>
+    <>
+      <Navbar title="Storybook App" />
+      <Routes>
+        <Route path="/" element={<StorybooksPage storybooks={storybooks} />} />
+        <Route path="/reader/:id" element={<ReaderPage />} />
+      </Routes>
+    </>
   );
 }
 

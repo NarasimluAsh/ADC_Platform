@@ -1,71 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #000; /* Black text */
+  background-color: #fff; /* White background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Basic styles for the main section */
-.main-section {
+a {
+  font-weight: 500;
+  color: #535bf2; /* Adjusted to match the navbar color scheme */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #4247a2;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* Styles for the list of storybooks */
-.storybook-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-/* Styles for individual storybook items */
-.storybook-item {
-  border: 1px solid #666;
-  padding: 16px;
-  width: auto;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
   border-radius: 8px;
-  background-color: #66666633;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #e7e7e7;
   cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #535bf2;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Styles for the storybook details */
-.storybook-details {
-  display: flex;
-  flex-direction: column;
-  width: 24rem;
-}
-
-/* Styles for the cover image */
-.storybook-cover {
-  width: 8rem;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Hover effect: slightly enlarge and add a shadow */
-.storybook-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Click effect: slightly depress */
-.storybook-item:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.storybook-item h3 {
-  margin: 0;
-  color: #f9f9f9;
-}
-
-.storybook-item p {
-  margin: 0;
-  color: #ccc;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #000; /* Black text */
+    background-color: #fff; /* White background */
+  }
+  a:hover {
+    color: #4247a2;
+  }
+  button {
+    background-color: #e7e7e7;
+  }
 }

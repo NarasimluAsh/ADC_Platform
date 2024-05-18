@@ -27,6 +27,8 @@ src/
 └── index.jsx
 
 ## PrimeIcons
+npm install primereact primeicons
+
 Download
 - npm install primeicons
 

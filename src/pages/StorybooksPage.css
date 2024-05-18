@@ -1,0 +1,18 @@
+/* src/pages/StorybooksPage.css */
+
+.main-section {
+  padding: 2rem;
+  padding-top: 60px; /* Adjust for fixed navbar */
+  text-align: center;
+}
+
+.storybook-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.storybook-item-wrapper {
+  cursor: pointer;
+}

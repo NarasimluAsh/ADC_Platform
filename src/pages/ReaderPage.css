@@ -1,7 +1,8 @@
-/* src/ReaderPage.css */
+/* src/pages/ReaderPage.css */
 
 .reader-page {
   padding: 20px;
+  padding-top: 80px; /* Adjust for fixed navbar */
   text-align: center;
 }
 
@@ -63,5 +64,3 @@
   height: auto;
   border-radius: 8px;
 }
-
-
