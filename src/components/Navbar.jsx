@@ -8,7 +8,7 @@ function Navbar({ title }) {
       <div className="navbar-menu">
         <FaBars />
       </div>
-      <h1 className="navbar-title">{title}</h1>
+      <h3 className="navbar-title">{title}</h3>
       <div className="navbar-profile">
         <FaUserCircle />
       </div>

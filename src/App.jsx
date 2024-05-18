@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
-import StorybookItem from './components/StorybookItem';
 import ReaderPage from './pages/ReaderPage';
 import StorybooksPage from './pages/StorybooksPage';
 import Navbar from './components/Navbar';

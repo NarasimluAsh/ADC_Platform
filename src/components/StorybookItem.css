@@ -1,6 +1,6 @@
 /* Styles for individual storybook items */
 .storybook-item {
-    padding: 16px;
+    padding: 8px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
   .storybook-details {
     display: flex;
     flex-direction: column;
-    width: 24rem;
+    width: 16rem;
   }
   
   /* Styles for the cover image */

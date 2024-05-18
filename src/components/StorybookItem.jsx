@@ -7,7 +7,7 @@ function StorybookItem({ title, author, pageCover }) {
       {pageCover && <img src={pageCover} alt={`${title} cover`} className="storybook-cover" />}
       <div className="storybook-details">
         <h3>{title}</h3>
-        <p>{author}</p>
+        <p>By {author}</p>
       </div>
     </div>
   );

@@ -2,9 +2,10 @@
 
 /* Main section styles */
 .main-section {
+  margin: 0;
   padding: 2rem;
   text-align: center;
-  margin-top: 60px; /* Adjust for fixed navbar */
+  margin-top: 80px; /* Adjust for fixed navbar */
 }
 
 .storybook-list {

@@ -3,17 +3,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 0px 20px;
+  padding: 0px;
   background-color: #fff;
   color: #535bf2;
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  max-height: 80px;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-menu {
+  padding: 10px 20px;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -21,13 +23,14 @@
 .navbar-title {
   flex: 1;
   text-align: center;
-  font-size: 1.2rem;
+  
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .navbar-profile {
+  padding: 10px 20px;
   font-size: 2.5rem;
   cursor: pointer;
 }

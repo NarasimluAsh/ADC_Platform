@@ -9,7 +9,6 @@ function StorybooksPage({ storybooks }) {
 
   return (
     <div className="main-section">
-      <h1>Available Storybooks</h1>
       <div className="storybook-list">
         {storybooks.map((book) => (
           <div
