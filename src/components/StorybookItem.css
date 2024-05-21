@@ -21,6 +21,7 @@
   .storybook-cover {
     width: 16rem;
     height: auto;
+    max-height: 450px;
     border-radius: 8px;
   }
   

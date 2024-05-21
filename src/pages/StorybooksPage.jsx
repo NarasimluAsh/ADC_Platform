@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import StorybookItem from '../components/StorybookItem';
 import './StorybooksPage.css';
+import 'primeicons/primeicons.css';
 
 function StorybooksPage({ storybooks }) {
   const navigate = useNavigate();
@@ -23,6 +24,12 @@ function StorybooksPage({ storybooks }) {
             />
           </div>
         ))}
+        <button
+          className="add-storybook-page"
+          onClick={() => navigate('/add-storybook')}
+        >
+          <span className="pi pi-plus"></span>
+        </button>
       </div>
     </div>
   );

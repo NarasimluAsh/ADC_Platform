@@ -1,11 +1,8 @@
-/* src/pages/StorybooksPage.css */
-
 /* Main section styles */
 .main-section {
   margin: 0;
   padding: 2rem;
   text-align: center;
-  margin-top: 80px; /* Adjust for fixed navbar */
 }
 
 .storybook-list {
@@ -17,4 +14,30 @@
 
 .storybook-item-wrapper {
   cursor: pointer;
+}
+
+.add-storybook-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--primary-color-light);
+  transition: var(--tran-03);
+}
+
+.add-storybook-page:hover {
+  background-color: var(--primary-color);
+}
+
+.add-storybook-page span {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.add-storybook-page:hover span {
+  color: #fff;
 }
