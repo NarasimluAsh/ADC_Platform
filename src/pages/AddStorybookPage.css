@@ -2,7 +2,8 @@
 
 .add-storybook-container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 20px auto;
+    margin-top: 80px;
     padding: 20px;
     background-color: var(--primary-color-light);
     border-radius: 8px;

@@ -1,6 +1,7 @@
 /* Main section styles */
 .main-section {
   margin: 0;
+  margin-top: 80px;
   padding: 2rem;
   text-align: center;
 }

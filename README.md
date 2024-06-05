@@ -46,4 +46,7 @@ Install
 - npm install react-router-dom
 - npm install react-swipeable react-fullscreen
 
+## API
+- npm install react-router-dom
+
 

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { db, storage } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes } from 'firebase/storage';
+import Navbar from '../components/Navbar';
 import './AddStorybookPage.css';
 
 function AddStorybookPage() {
@@ -59,73 +60,76 @@ function AddStorybookPage() {
   };
 
   return (
-    <div className="add-storybook-container">
-      <h1>Add a New Storybook</h1>
-      <form
-        className="add-storybook-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleAddStorybook();
-        }}
-      >
-        <div className="form-group">
-          <label htmlFor="title">Book Title</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter book title"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="author">Author Name</label>
-          <input
-            type="text"
-            id="author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            placeholder="Enter author name"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="level">Book Level</label>
-          <input
-            type="number"
-            id="level"
-            value={level}
-            onChange={(e) => setLevel(e.target.value)}
-            placeholder="Enter book level"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="pageCover">Page Cover</label>
-          <input
-            type="file"
-            id="pageCover"
-            onChange={(e) => setPageCover(e.target.files[0])}
-            accept="image/*"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="pages">Pages</label>
-          <input
-            type="file"
-            id="pages"
-            onChange={(e) => setPages(Array.from(e.target.files))}
-            accept="image/*"
-            multiple
-          />
-        </div>
-        <button type="submit" className="add-storybook-button">
-          Add Storybook
-        </button>
-      </form>
-    </div>
+    <>
+      <Navbar title={'Storybooks'}/>
+      <div className="add-storybook-container">
+        <h1>Add a New Storybook</h1>
+        <form
+          className="add-storybook-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleAddStorybook();
+          }}
+        >
+          <div className="form-group">
+            <label htmlFor="title">Book Title</label>
+            <input
+              type="text"
+              id="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Enter book title"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="author">Author Name</label>
+            <input
+              type="text"
+              id="author"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              placeholder="Enter author name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="level">Book Level</label>
+            <input
+              type="number"
+              id="level"
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
+              placeholder="Enter book level"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="pageCover">Page Cover</label>
+            <input
+              type="file"
+              id="pageCover"
+              onChange={(e) => setPageCover(e.target.files[0])}
+              accept="image/*"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="pages">Pages</label>
+            <input
+              type="file"
+              id="pages"
+              onChange={(e) => setPages(Array.from(e.target.files))}
+              accept="image/*"
+              multiple
+            />
+          </div>
+          <button type="submit" className="add-storybook-button">
+            Add Storybook
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

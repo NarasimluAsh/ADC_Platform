@@ -20,7 +20,7 @@
   /* Styles for the cover image */
   .storybook-cover {
     width: 16rem;
-    height: auto;
+    height: 19rem;
     max-height: 450px;
     border-radius: 8px;
   }

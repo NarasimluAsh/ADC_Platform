@@ -1,0 +1,9 @@
+.audio-file-uploader-page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-file-uploader-page-body button {
+    background-color: #6d6363;
+}
