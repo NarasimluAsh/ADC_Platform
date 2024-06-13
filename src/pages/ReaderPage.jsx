@@ -65,7 +65,7 @@ function ReaderPage() {
   return (
     <div className="reader-page" {...handlers}>
       <div className="navigation-buttons">
-        <button onClick={() => navigate('/')} className="back-button">Back</button>
+        <button onClick={() => navigate('/storybooks')} className="back-button">Back</button>
         <button onClick={handlePreviousPage} disabled={currentPageIndex === 0}>Previous</button>
         <button onClick={handleNextPage} disabled={currentPageIndex === storybook.pages.length - 1}>Next</button>
       </div>

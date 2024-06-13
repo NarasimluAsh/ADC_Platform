@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { db, storage } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes } from 'firebase/storage';
-import Navbar from '../components/Navbar';
 import './AddStorybookPage.css';
 
 function AddStorybookPage() {
@@ -61,7 +60,6 @@ function AddStorybookPage() {
 
   return (
     <>
-      <Navbar title={'Storybooks'}/>
       <div className="add-storybook-container">
         <h1>Add a New Storybook</h1>
         <form

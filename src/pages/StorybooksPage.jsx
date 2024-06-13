@@ -1,17 +1,43 @@
-// src/pages/StorybooksPage.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StorybookItem from '../components/StorybookItem';
-import Navbar from '../components/Navbar';
+import { collection, getDocs } from 'firebase/firestore';
+import { getDownloadURL, ref } from 'firebase/storage';
+import { db, storage } from '../firebase';
 import './StorybooksPage.css';
 import 'primeicons/primeicons.css';
 
-function StorybooksPage({ storybooks }) {
+function StorybooksPage() {
+  const [storybooks, setStorybooks] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchStorybooks = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'Storybooks'));
+        const books = await Promise.all(
+          querySnapshot.docs.map(async doc => {
+            const data = doc.data();
+            const pageCoverRef = ref(storage, data.pageCover);
+            const pageCoverUrl = await getDownloadURL(pageCoverRef);
+            return {
+              id: doc.id,
+              ...data,
+              pageCover: pageCoverUrl
+            };
+          })
+        );
+        setStorybooks(books);
+      } catch (error) {
+        console.error("Error fetching storybooks: ", error);
+      }
+    };
+  
+    fetchStorybooks();
+  }, []);
 
   return (
     <>
-      <Navbar title={'Storybooks'}/>
       <div className="main-section">
         <div className="storybook-list">
           {storybooks.map((book) => (

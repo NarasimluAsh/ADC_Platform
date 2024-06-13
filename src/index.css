@@ -12,9 +12,10 @@
 :root {
   /* Colors */
   --primary-color: #695CFE;
-  --background-color: #E4E9F7;
+  --sidebar-background: #f9f9fa;
+  --background-color: #e3e7ef;
   --text-color: #242424;
-  --text-light: #707070;
+  --text-light: #1d1c1c;
   --white: #FFF;
 
   /* Transition */
@@ -26,6 +27,16 @@
   --large-screen: 1024px;
 }
 
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  --sidebar-background: #171719;
+  --background-color: #111112;
+  --text-color: #f0f0f0;
+  --text-light: #d3d3d3;
+  --white: #333;
+}
+
+/* Global body styles */
 body {
   min-height: 100vh;
   background-color: var(--background-color);
@@ -37,6 +48,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Headings styles */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: var(--text-color);
@@ -57,6 +69,7 @@ h3 {
   font-weight: 600;
 }
 
+/* Anchor tag styles */
 a {
   font-weight: 500;
   color: var(--primary-color);
@@ -68,6 +81,7 @@ a:hover {
   color: #535bf2;
 }
 
+/* Button styles */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -88,6 +102,74 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Form styles */
+/* Container to center the form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: -webkit-fill-available;
+}
+
+form {
+  margin: 2rem 0;
+  width: -webkit-fill-available;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+form button:hover {
+  background-color: #535bf2;
+}
+
+form .form-footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+form .form-footer a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* Responsive adjustments */
 @media (max-width: var(--large-screen)) {
   h1 {
     font-size: 2rem;

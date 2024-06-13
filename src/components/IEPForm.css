@@ -1,0 +1,80 @@
+.IEP-form {
+    max-width: 1960px;
+    margin: 0;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: var(--sidebar-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .IEP-form h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .IEP-form h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .IEP-form div {
+    margin-bottom: 1rem;
+  }
+  
+  .IEP-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .IEP-form input,
+  .IEP-form textarea,
+  .IEP-form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .IEP-form textarea {
+    resize: vertical;
+  }
+  
+  .IEP-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .IEP-form button:hover {
+    background-color: #535bf2;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }
+  
+  .IEP-form .checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .checkbox-container input {
+    width: auto;
+    min-width: 3rem;
+  }
+  .checkbox-container label {
+    display: flex;
+    margin: 0;
+  }
