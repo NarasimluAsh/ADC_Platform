@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { db, storage } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes } from 'firebase/storage';
-import './AddStorybookPage.css';
 
 function AddStorybookPage() {
   const [title, setTitle] = useState('');

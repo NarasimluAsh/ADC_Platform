@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import 'primeicons/primeicons.css';
-import './Recorder.css';
 
 function Recorder() {
   // State for tracking whether recording is in progress

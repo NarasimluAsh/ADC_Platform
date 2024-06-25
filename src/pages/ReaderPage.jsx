@@ -5,7 +5,6 @@ import { db, storage } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { getDownloadURL, ref } from 'firebase/storage';
 import { useSwipeable } from 'react-swipeable';
-import './ReaderPage.css';
 
 function ReaderPage() {
   const { id } = useParams();

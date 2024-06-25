@@ -4,7 +4,6 @@ import StorybookItem from '../components/StorybookItem';
 import { collection, getDocs } from 'firebase/firestore';
 import { getDownloadURL, ref } from 'firebase/storage';
 import { db, storage } from '../firebase';
-import './StorybooksPage.css';
 import 'primeicons/primeicons.css';
 
 function StorybooksPage() {

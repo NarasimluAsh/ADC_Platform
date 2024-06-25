@@ -19,6 +19,9 @@ Currently, two official plugins are available:
 # The project structure should look like this:
 src/
 ├── assets
+  ├── images
+  ├── audio
+├── authentication
 ├── components
 ├── pages
 ├── App.css
@@ -48,5 +51,8 @@ Install
 
 ## API
 - npm install react-router-dom
+
+# Display pop-up screen
+- npm install react-modal
 
 

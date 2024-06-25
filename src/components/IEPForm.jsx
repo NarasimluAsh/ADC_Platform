@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './IEPForm.css';
 
 const IEPForm = () => {
   const [formData, setFormData] = useState({
