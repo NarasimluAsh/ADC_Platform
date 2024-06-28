@@ -1,0 +1,39 @@
+/* Form */
+
+.form-container {
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--sidebar-background);
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-container form button{
+  background-color: var(--primary-color);
+}
+.form-container .form-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.form-container .form-footer button{
+  color: var(--primary-color);
+}
+
+.p-field {
+
+}
+
+.p-inputtext {
+    font-size: 2rem;
+    width: -webkit-fill-available;
+}
+
+.form-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
