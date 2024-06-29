@@ -18,6 +18,8 @@ import IEPForm from './components/IEPForm';
 import QuizPage from './pages/QuizPage';
 import AssessmentPage from './pages/AssessmentPage';
 import ToolsPage from './pages/ToolsPage';
+import ClassroomPage from './pages/ClassroomPage';
+import AddStudentPage from './pages/AddStudentPage';
 import { db, storage } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import { getDownloadURL, ref } from 'firebase/storage';
@@ -77,6 +79,8 @@ function App() {
           <Route path="/add-storybook" element={<ProtectedRoute element={AddStorybookPage} />} />
           <Route path="/quiz" element={<ProtectedRoute element={QuizPage} />} />
           <Route path="/assessments" element={<ProtectedRoute element={AssessmentPage} />} />
+          <Route path="/classroom" element={<ProtectedRoute element={ClassroomPage} />} />
+          <Route path="/add-student" element={<ProtectedRoute element={AddStudentPage} />} />
         </Routes>
       </div>
     </div>
