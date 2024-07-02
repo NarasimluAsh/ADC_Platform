@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
-import { db } from '../firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { auth, db } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
@@ -10,19 +9,23 @@ import { Button } from 'primereact/button';
 import { Message } from 'primereact/message';
 
 const Signup = () => {
-  // State variables for email and password
+  // State variables for email, password, and error message
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // Handle form submission for signup
+  /**
+   * Handle form submission for signup
+   * @param {Object} e - event object
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      addUserDetail();
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await addUserDetail(userCredential.user.uid);
+      console.log('User signed up and details stored:', userCredential.user);
       navigate('/');
     } catch (error) {
       console.error('Error signing up: ', error);
@@ -30,19 +33,22 @@ const Signup = () => {
     }
   };
 
-  // Store user detail
-  const addUserDetail = async (e) => {
+  /**
+   * Store user detail in Firestore
+   * @param {string} userId - Firebase user ID
+   */
+  const addUserDetail = async (userId) => {
     try {
-      const docRef = await addDoc(collection(db, 'Users'), {
+      await setDoc(doc(db, 'Users', userId), {
         email,
-        created_date: "",
-      })
-      console.log(docRef);
+        created_date: new Date().toISOString(),
+      });
+      console.log('User detail added to Firestore with user ID: ', userId);
     } catch (error) {
-      console.log(error)
+      console.error('Error adding user detail: ', error);
+      setError('Failed to store user detail.');
     }
   };
-
 
   return (
     <div className='form-container'>

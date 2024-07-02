@@ -3,7 +3,7 @@
   import './App.css';
   import './authentication/Authentication.css';
   import './components/Components.css';
-  import 'primereact/resources/themes/saga-blue/theme.css';  // Choose a theme
+  import 'primereact/resources/themes/saga-blue/theme.css';
   import 'primereact/resources/primereact.min.css';
   import 'primeicons/primeicons.css';
   import ViewIEP from './components/ViewIEP';

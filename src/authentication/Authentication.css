@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 1rem;
   border-radius: 8px;
+  width: 30rem;
   background: var(--sidebar-background);
 }
 .form-container form{
@@ -25,12 +26,18 @@
 }
 
 .p-field {
-
+  width: 100%;
 }
 
 .p-inputtext {
-    font-size: 2rem;
-    width: -webkit-fill-available;
+    padding: 1rem;
+    font-size: 1rem;
+    height: 3rem;
+    width: 100%;
+}
+
+.p-password {
+    width: 100%;
 }
 
 .form-footer {
