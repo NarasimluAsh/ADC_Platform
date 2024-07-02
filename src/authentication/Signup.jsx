@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
@@ -20,12 +22,27 @@ const Signup = () => {
     setError('');
     try {
       await createUserWithEmailAndPassword(auth, email, password);
+      addUserDetail();
       navigate('/');
     } catch (error) {
       console.error('Error signing up: ', error);
       setError(error.message);
     }
   };
+
+  // Store user detail
+  const addUserDetail = async (e) => {
+    try {
+      const docRef = await addDoc(collection(db, 'Users'), {
+        email,
+        created_date: "",
+      })
+      console.log(docRef);
+    } catch (error) {
+      console.log(error)
+    }
+  };
+
 
   return (
     <div className='form-container'>

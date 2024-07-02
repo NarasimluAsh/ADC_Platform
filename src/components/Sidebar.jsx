@@ -2,19 +2,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import { FaEdit, FaTachometerAlt, FaTools } from 'react-icons/fa'; // Import icons
+import { FaClipboard, FaEdit, FaTachometerAlt, FaTools } from 'react-icons/fa'; // Import icons
+import { FaSection } from 'react-icons/fa6';
 
 const Sidebar = ({ theme, toggleTheme }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
         <img src="reading-logo.jpeg" alt="logo" />
-        <h2>Dreams</h2>
       </div>
       <div className="sidebar-menu">
         <Link to="/dashboard" className="sidebar-link">
           <FaTachometerAlt className="sidebar-icon" />
           <span>Dashboard</span>
+        </Link>
+        <Link to="/classroom" className="sidebar-link">
+          <FaClipboard className="sidebar-icon" />
+          <span>Classroom</span>
         </Link>
         <Link to="/assessments" className="sidebar-link">
           <FaEdit className="sidebar-icon" />
