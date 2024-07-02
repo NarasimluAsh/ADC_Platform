@@ -10,20 +10,24 @@ import { auth } from '../firebase';
  * @param {Object} props - The props for the component.
  * @param {React.Component} props.element - The component to render for the protected route.
  * @param {Object} props.rest - Additional props passed to the Route component.
+ * @returns {JSX.Element} The ProtectedRoute component.
  */
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   const [user, loading, error] = useAuthState(auth);
 
-  if (loading) {
+  // Render loading state while authentication status is being determined
+  if (loading) {  
     return <div>Loading...</div>;
   }
 
+  // Render error message if there is an error in authentication
   if (error) {
     console.error('Error in ProtectedRoute:', error);
     return <div>Error: {error.message}</div>;
   }
 
-  return user ? <Component {...rest} /> : <Navigate to="/login" />;
+  // Render the component if the user is authenticated, otherwise redirect to login page
+  return user ? <Component {...rest} /> : <Navigate to='/login' />;
 };
 
 export default ProtectedRoute;

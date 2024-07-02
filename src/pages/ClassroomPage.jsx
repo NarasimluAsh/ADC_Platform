@@ -9,8 +9,8 @@ const ClassroomPage = () => {
             <button
                 className="add-student-page"
                 onClick={() => navigate('/add-student')}
-            ></button>
-        </div>
+            >Add Student IEP</button>
+    </div>
     );
 };
 

@@ -1,5 +1,4 @@
-/* Form */
-
+/* Form container styles */
 .form-container {
   margin: 0 auto;
   padding: 1rem;
@@ -7,39 +6,46 @@
   width: 30rem;
   background: var(--sidebar-background);
 }
-.form-container form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.form-container form button{
+
+.form-container form button {
   background-color: var(--primary-color);
 }
-.form-container .form-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+
+/* Form footer styles */
+.form-container .form-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
-.form-container .form-footer button{
+
+.form-container .form-footer button {
   color: var(--primary-color);
 }
 
+/* PrimeReact field styles */
 .p-field {
   width: 100%;
 }
 
 .p-inputtext {
-    padding: 1rem;
-    font-size: 1rem;
-    height: 3rem;
-    width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  height: 3rem;
+  width: 100%;
 }
 
 .p-password {
-    width: 100%;
+  width: 100%;
 }
 
+/* Additional form footer styles */
 .form-footer {
   margin-top: 1rem;
   text-align: center;

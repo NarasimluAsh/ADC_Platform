@@ -24,10 +24,6 @@ const Sidebar = ({ theme, toggleTheme }) => {
           <FaEdit className="sidebar-icon" />
           <span>Assessments</span>
         </Link>
-        <Link to="/tools" className="sidebar-link">
-          <FaTools className="sidebar-icon" />
-          <span>Tools</span>
-        </Link>
       </div>
       <div className="sidebar-footer">
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />

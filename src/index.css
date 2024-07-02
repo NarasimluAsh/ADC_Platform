@@ -93,6 +93,7 @@ button {
   font-size: 1rem;
   font-weight: 500;
   background-color: var(--white);
+  color: var(--text-color);
   cursor: pointer;
   transition: border-color var(--transition);
 }

@@ -8,6 +8,11 @@ import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { Message } from 'primereact/message';
 
+/**
+ * Signup component handles user registration using Firebase authentication.
+ *
+ * @returns {JSX.Element} The Signup component.
+ */
 const Signup = () => {
   // State variables for email, password, and error message
   const [email, setEmail] = useState('');
@@ -17,6 +22,7 @@ const Signup = () => {
 
   /**
    * Handle form submission for signup
+   * 
    * @param {Object} e - event object
    */
   const handleSubmit = async (e) => {
@@ -28,13 +34,18 @@ const Signup = () => {
       console.log('User signed up and details stored:', userCredential.user);
       navigate('/');
     } catch (error) {
-      console.error('Error signing up: ', error);
-      setError(error.message);
+      if (error.code === 'auth/email-already-in-use') {
+        setError('This email is already in use. Please try logging in.');
+      } else {
+        console.error('Error signing up: ', error);
+        setError('An error occurred during signup. Please try again.');
+      }
     }
   };
 
   /**
    * Store user detail in Firestore
+   * 
    * @param {string} userId - Firebase user ID
    */
   const addUserDetail = async (userId) => {
@@ -53,33 +64,33 @@ const Signup = () => {
   return (
     <div className='form-container'>
       <h1>Sign Up</h1>
-      {error && <Message severity="error" text={error} />}
+      {error && <Message severity='error' text={error} />}
       <form onSubmit={handleSubmit}>
-        <div className="p-field">
-          <label htmlFor="email">Email:</label>
+        <div className='p-field'>
+          <label htmlFor='email'>Email:</label>
           <InputText
-            id="email"
-            type="email"
+            id='email'
+            type='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className="p-field">
-          <label htmlFor="password">Password:</label>
+        <div className='p-field'>
+          <label htmlFor='password'>Password:</label>
           <Password
-            id="password"
+            id='password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             feedback={false}
             required
           />
         </div>
-        <Button label="Sign Up" icon="pi pi-user-plus" type="submit" />
+        <Button label='Sign Up' icon='pi pi-user-plus' type='submit' />
       </form>
-      <div className="form-footer">
+      <div className='form-footer'>
         <span>Already have an account? </span>
-        <Button label="Login" className="p-button-link" onClick={() => navigate('/login')} />
+        <Button label='Login' className='p-button-link' onClick={() => navigate('/login')} />
       </div>
     </div>
   );

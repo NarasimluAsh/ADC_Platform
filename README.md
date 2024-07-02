@@ -22,8 +22,21 @@ src/
   ├── images
   ├── audio
 ├── authentication
+  ├── Authentication.css
+  ├── Login.jsx
+  ├── ProtectedRoute.jsx
+  ├── Signup.jsx
 ├── components
+  ├── AssessmentCard.jsx
+  ├── Components.css
+  ├── ResultModal.jsx
+  ├── Sidebar.jsx
+  ├── ThemeToggle.jsx
 ├── pages
+  ├── AddStudentPage.jsx
+  ├── AssessmentPage.jsx
+  ├── ClassroomPage.jsx
+  ├── Dashboard.jsx
 ├── App.css
 ├── App.jsx
 ├── firebase.js

@@ -1,0 +1,164 @@
+{
+    {
+        studentId: "student-123",
+        dateCreated: new Date(),
+        learnerInfo: {
+          name: "John Doe",
+          age: 15,
+          dateOfBirth: new Date("2009-05-15"),
+          sex: "Male",
+          grade: "Grade 8",
+          address: "123 Main St, Springfield, IL, 62704",
+          guardianName: "Jane Doe",
+          contactNumber: "555-1234"
+        },
+        disabilities: {
+          autism: false,
+          deafBlindness: false,
+          emotionalBehavioralDisorders: true,
+          hearingImpairment: false,
+          intellectualDisability: false,
+          visualImpairment: false,
+          otherHealthImpairment: false,
+          orthopedicImpairment: false,
+          speechLanguageImpairment: false,
+          learningDisabilities: true,
+          multipleDisability: false
+        },
+        medicalHistory: "ADHD, taking Medication A.",
+        personalQualities: {
+          interests: ["watching cartoons", "sports", "drawing", "eating"],
+          preferences: ["visual learning", "kinesthetic learning", "learning with music and movement"],
+          hobbies: ["Art and Crafts", "Cooking", "Sports", "Singing and dancing", "Gardening"],
+          independentSkills: ["Eating", "Dressing", "Lacing shoes", "Making friends", "Walking"],
+          intellectualFunctioning: {
+            performanceInClass: "Needs a quiet place to do individual work",
+            abilityToFollowInstructions: "Follows instructions well one at a time",
+            abilityToUnderstand: "Learns quickly with visual cues",
+            abilityToExpressIdeas: "Expresses ideas well in Creole",
+            problemSolvingSkills: "Able to use money"
+          }
+        },
+        factorsAffectingProgress: "John comes from a low-income household. He has difficulty focusing on tasks for more than 10 minutes and disturbs peers. He struggles with handwriting, spelling, and communicating in French.",
+        performanceAndFunctioning: [
+          {
+            area: "Academic skills",
+            subject: "English (alphabets)",
+            strength: "Recognizes some letters in lowercase and uppercase",
+            weakness: "Writes some letters inversely",
+            needs: "Provide letter models with directional arrows"
+          },
+          {
+            area: "Social/Emotional Development",
+            subject: "Socialization (sharing)",
+            strength: "Makes friends and communicates well with close friends",
+            weakness: "Does not play cooperatively with other friends",
+            needs: "Learn to cope with disappointment and respect others’ turn, praise chart for behavior"
+          },
+          {
+            area: "Functional Skills",
+            subject: "Time management skills",
+            strength: "Completes tasks like cut & paste, matching, sorting",
+            weakness: "Easily distracted by personal belongings and others",
+            needs: "Track progress and reflect on time spent"
+          }
+        ],
+        specialFactors: {
+          specialTransportation: false,
+          behaviorImpact: true,
+          behaviorImpactDescription: "Disrupts peers, needs a Behavior Intervention Plan.",
+          languageNeeds: true,
+          languageNeedsDescription: "Speaks and understands only Creole and English.",
+          visualImpairmentBraille: false,
+          communicationNeeds: true,
+          communicationNeedsDescription: "Difficulty with instructions in French.",
+          assistiveTechnology: true,
+          assistiveTechnologyDescription: "Needs laptop, tablet, smart board.",
+          otherFactors: "Family financial issues; no home follow-up; needs occupational therapy for fine motor skills."
+        },
+        annualGoals: [
+          {
+            goal: "Spell sight words",
+            description: "Spell common sight words correctly.",
+            status: "Not Started"
+          },
+          {
+            goal: "Write letters correctly",
+            description: "Write letters in lowercase and uppercase correctly.",
+            status: "Not Started"
+          },
+          {
+            goal: "Write name correctly",
+            description: "Write name correctly on worksheets.",
+            status: "Not Started"
+          }
+        ],
+        termGoals: [
+          {
+            term: "1st Term",
+            goals: [
+              {
+                subject: "English",
+                goal: "Spelling alphabets in order",
+                status: "Not Started"
+              },
+              {
+                subject: "Socialization",
+                goal: "Making use of polite words",
+                status: "Not Started"
+              },
+              {
+                subject: "Time Management",
+                goal: "Individualize task and create study habit",
+                status: "Not Started"
+              }
+            ]
+          }
+        ],
+        shortTermGoals: [
+          {
+            timeFrame: "1st week",
+            learningOutcomes: "Spelling alphabets in order",
+            activitiesInterventions: "Use of flashcards and audio song"
+          },
+          {
+            timeFrame: "2nd week",
+            learningOutcomes: "Writing/forming letters in lowercase",
+            activitiesInterventions: "Use of sensory tray activities"
+          }
+        ],
+        instructionalStrategies: [
+          {
+            challenge: "Challenged in organizing letters",
+            resources: "Bristol papers and markers",
+            personResponsible: "Class Teacher"
+          },
+          {
+            challenge: "Using writing software or keyboard",
+            resources: "Tablets or laptop",
+            personResponsible: "Class Teacher"
+          }
+        ],
+        reviewDate: new Date("2024-12-31"),
+        iepTeam: [
+          {
+            name: "Mr x & Mrs Y",
+            designation: "School Manager/ Head of School",
+            signature: ""
+          },
+          {
+            name: "Z",
+            designation: "Class Teacher",
+            signature: ""
+          },
+          {
+            name: "V",
+            designation: "Assistant Teacher",
+            signature: ""
+          },
+          {
+            name: "W",
+            designation: "Parents",
+            signature: ""
+          }
+}
